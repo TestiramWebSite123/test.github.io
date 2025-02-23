@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karaoke Request Form</title>
+    <title>Pošalji upit</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -49,13 +49,13 @@
         <label for="name">Vaše ime:</label>
         <input type="text" id="name" name="name" required>
 
-        <label for="song">Naziv pjesme:</label>
+        <label for="song">Lokacija vjenčanja :</label>
         <input type="text" id="song" name="song" required>
 
-        <label for="artist">Izvođač:</label>
+        <label for="artist">Datum:</label>
         <input type="text" id="artist" name="artist" required>
 
-        <label for="key">Željena tonalitet (opcionalno):</label>
+        <label for="key">Broj ljudi:</label>
         <select id="key" name="key">
             <option value="original">Original</option>
             <option value="viši">Viši</option>
