@@ -1,16 +1,15 @@
 # test.github.io
-
 <!DOCTYPE html>
 <html lang="hr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pošalji upit</title>
+    <title>Wedding Contact Form</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #222;
-            color: white;
+            background-color: #f9f9f9;
             text-align: center;
             margin: 0;
             padding: 0;
@@ -18,51 +17,53 @@
         .container {
             width: 50%;
             margin: auto;
-            background: #333;
+            background: white;
             padding: 20px;
             border-radius: 10px;
             margin-top: 50px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
         input, select, button {
             width: 100%;
             padding: 10px;
             margin-top: 10px;
-            border: none;
+            border: 1px solid #ccc;
             border-radius: 5px;
         }
         button {
-            background-color: #ff5733;
+            background-color: #ff66b2;
             color: white;
             cursor: pointer;
+            border: none;
         }
         button:hover {
-            background-color: #e74c3c;
+            background-color: #e65c9c;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h2>Karaoke Request Form</h2>
-    <form action="submit_request.php" method="POST">
-        <label for="name">Vaše ime:</label>
+    <h2>Wedding Contact Form</h2>
+    <form action="submit_wedding.php" method="POST">
+        <label for="name">Ime i Prezime:</label>
         <input type="text" id="name" name="name" required>
 
-        <label for="song">Lokacija vjenčanja :</label>
-        <input type="text" id="song" name="song" required>
+        <label for="location">Lokacija:</label>
+        <input type="text" id="location" name="location" required>
 
-        <label for="artist">Datum:</label>
-        <input type="text" id="artist" name="artist" required>
+        <label for="date">Datum:</label>
+        <input type="date" id="date" name="date" required>
 
-        <label for="key">Broj ljudi:</label>
-        <select id="key" name="key">
-            <option value="original">Original</option>
-            <option value="viši">Viši</option>
-            <option value="niži">Niži</option>
-        </select>
+        <label for="guests">Broj ljudi:</label>
+        <input type="number" id="guests" name="guests" required min="1">
 
-        <button type="submit">Pošalji zahtjev</button>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <div class="g-recaptcha" data-sitekey="TVOJ_RECAPTCHA_SITE_KEY"></div>
+
+        <button type="submit">Pošalji</button>
     </form>
 </div>
 
