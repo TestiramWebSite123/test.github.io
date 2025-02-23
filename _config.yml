@@ -1,5 +1,4 @@
-title TURK
-logo
-description KARAOKE
-#show_downloads: true
-theme: jekyll-theme
+title: "My GitHub Pages site"
+description: "A simple website"
+baseurl: "/myproject"
+theme: "jekyll-theme"
