@@ -1,11 +1,9 @@
-# test.github.io
 <!DOCTYPE html>
 <html lang="hr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Contact Form</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,13 +29,14 @@
             border-radius: 5px;
         }
         button {
-            background-color: #ff66b2;
+            background-color: #8B4513; /* Smeđa boja */
             color: white;
             cursor: pointer;
             border: none;
+            font-size: 16px;
         }
         button:hover {
-            background-color: #e65c9c;
+            background-color: #A0522D; /* Svjetlija smeđa */
         }
     </style>
 </head>
@@ -60,8 +59,6 @@
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
-
-        <div class="g-recaptcha" data-sitekey="TVOJ_RECAPTCHA_SITE_KEY"></div>
 
         <button type="submit">Pošalji</button>
     </form>
